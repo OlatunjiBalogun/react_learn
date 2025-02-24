@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router,Routes,Route} from 'react-router'
+import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import HomeScreen from './pages/HomeScreen';
 import SignUp from './pages/SignUp';
 import Checkout from './pages/Checkout';
@@ -10,9 +10,10 @@ import Profile from './pages/Profile';
 import ShoppingCart from './pages/ShoppingCart';
 import Categories from './pages/Categories';
 import Courses from './pages/Courses';
+import Login from './pages/Login';
 const App = () => {
   return (
-    <div>
+    <div className='max-w-[1441px] m-auto'>
       <Router>
         <Routes>
           <Route path="/" element={<HomeScreen/>} />

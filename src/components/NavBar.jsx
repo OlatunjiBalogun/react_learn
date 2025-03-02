@@ -42,19 +42,17 @@ const NavBar = () => {
       <button onClick={toggleMenu} className="z-50 block lg:hidden">
         {isMenuopen ? <X /> : <MenuIcon />}
       </button>
-      {isMenuopen && (
-        <div className="w-screen h-screen flex items-center justify-center absolute top-0 bg-[#321d4c] lg:hidden left-[100%] transition-all duration-1000 translate-x-[-100%] ">
-          <div className="flex flex-col gap-14 items-center w-[100%] max-w-[500px] h-[500px] text-white py-4 justify-center px-4 shadow-2xl shadow-[#c379ff">
-            <Link className="w-full h-14 flex items-center justify-center text-center hover:scale-95 bg-red-500 rounded-lg shadow-sm" to="/categories">Categories</Link>
-            <Link className="w-full h-14 flex items-center justify-center text-center hover:scale-95 bg-red-500 rounded-lg shadow-sm" to="/mentors">Teach on Byway</Link>
-            <Link className="w-full h-14 flex items-center justify-center text-center hover:scale-95 bg-red-500 rounded-lg shadow-sm" to="/shoppingcart">
+        <div className={`fixed inset-0 bg-[#9ca3af] flex items-center justify-center z-40 transition-transform duration-1000 ease-in-out lg:hidden ${isMenuopen ? 'transform translate-x-0' : 'transform translate-x-full'}`}>
+          <div className="flex flex-col gap-8 items-center w-[100%] max-w-[500px] h-[500px] text-white py-4 justify-center px-4 shadow-2xl shadow-[#c379ff">
+            <Link className="w-full h-14 flex items-center justify-center text-center hover:scale-95 bg-[#111827] rounded-lg shadow-sm" to="/categories">Categories</Link>
+            <Link className="w-full h-14 flex items-center justify-center text-center hover:scale-95 bg-[#111827] rounded-lg shadow-sm" to="/mentors">Teach on Byway</Link>
+            <Link className="w-full h-14 flex items-center justify-center text-center hover:scale-95 bg-[#111827] rounded-lg shadow-sm" to="/shoppingcart">
               <ShoppingCart />
             </Link>
-            <Button btnText="Login" btnStyle="border border-[#334155] min-w-full" />
-            <Button btnText="Sign Up" btnStyle=" bg-[#334155] text-white min-w-full" />
+            <Button btnText="Login" btnStyle="border border-[#3b82f6] min-w-full p-3 rounded text-center flex items-center justify-center" />
+            <Button btnText="Sign Up" btnStyle=" bg-[#3b82f6] text-white min-w-full p-3 rounded text-center flex items-center justify-center" />
           </div>
         </div>
-      )}
     </nav>
   );
 };

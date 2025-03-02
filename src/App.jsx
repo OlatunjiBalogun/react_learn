@@ -11,10 +11,12 @@ import ShoppingCart from './pages/ShoppingCart';
 import Categories from './pages/Categories';
 import Courses from './pages/Courses';
 import Login from './pages/Login';
+import NavBar from './components/NavBar';
 const App = () => {
   return (
     <div className='max-w-[1441px] m-auto'>
       <Router>
+      <NavBar/>
         <Routes>
           <Route path="/" element={<HomeScreen/>} />
           <Route path="/signup" element={<SignUp />} />

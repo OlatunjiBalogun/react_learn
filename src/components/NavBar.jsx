@@ -37,7 +37,7 @@ const NavBar = () => {
           <ShoppingCart />
         </Link>
         <Button btnText="Login" btnStyle="border border-[#334155]" />
-        <Button btnText="Sign Up" btnStyle=" bg-[#334155] text-white" />
+        <Button btnText="Sign Up" onClick={()=>{window.location.href="/signup"}} btnStyle=" bg-[#334155] text-white" />
       </div>
       <button onClick={toggleMenu} className="z-50 block lg:hidden">
         {isMenuopen ? <X /> : <MenuIcon />}
@@ -50,7 +50,7 @@ const NavBar = () => {
               <ShoppingCart />
             </Link>
             <Button btnText="Login" btnStyle="border border-[#3b82f6] min-w-full p-3 rounded text-center flex items-center justify-center" />
-            <Button btnText="Sign Up" btnStyle=" bg-[#3b82f6] text-white min-w-full p-3 rounded text-center flex items-center justify-center" />
+            <Button btnText="Sign Up" onClick={()=>{window.location.href="/signup"}} btnStyle=" bg-[#3b82f6] text-white min-w-full p-3 rounded text-center flex items-center justify-center" />
           </div>
         </div>
     </nav>

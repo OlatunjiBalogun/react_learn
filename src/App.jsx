@@ -12,9 +12,11 @@ import Categories from './pages/Categories';
 import Courses from './pages/Courses';
 import Login from './pages/Login';
 import NavBar from './components/NavBar';
+import { AuthProvider } from './context/Authcontext';
 const App = () => {
   return (
     <div className='max-w-[1441px] m-auto'>
+      <AuthProvider>
       <Router>
       <NavBar/>
         <Routes>
@@ -30,9 +32,9 @@ const App = () => {
           <Route path="/categories" element={<Categories />} />
           <Route path="/courses" element={<Courses />} />
           
-
         </Routes>
       </Router>
+      </AuthProvider>
 
     </div>
   )

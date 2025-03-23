@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
 
       // make the api call
       const response = await fetch(
-        "https://byway-backend-theta.vercel.app/byway/signup",
+        "https://byway-backend-theta.vercel.app/api/auth/signup",
         reqObj
       );
       const data = await response.json();

@@ -65,6 +65,7 @@ const Login = () => {
             }
         } catch (err) {
             // Handle login errors
+            setIsLoading(false);
             console.log("Login Error: ", err);
             modal.openModal(err.message, 'error');
             // Clear any persistent errors
@@ -172,4 +173,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default Login;
